@@ -16,8 +16,7 @@
                 <label for="Email">Email : </label>
                 <input id="Email" type="text" placeholder="Enter Your E-mail" autofocus autocomplete="com" required> <br>
                 <label for="pass">Pass : </label>
-                <input type="password" placeholder="Enter Your Password " required > <br>
-
+                <input type="password" id="pass" placeholder="Enter Your Password " required > <br>
                 <input type="submit" value="Login">
                 <p>
                     OR  <a href="newacount.html">Create new acount  </a>
@@ -26,5 +25,18 @@
         </div>
         
     </div>
+    <script>
+        let form =document.getElementsByTagName("form")[0];
+        let mail= document.getElementById("Email");
+        let pass= document.getElementById("pass");
+        form.onsubmit=(e)=>{
+            if(mail.value==="1234@gmail.com" && pass.value==="1234"){
+                return
+            }
+            else{
+                e.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>
